@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ui_templates/log_in_pages/simple_blue.dart';
+import 'package:ui_templates/log_in_pages/simple_method/simple_blue.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
