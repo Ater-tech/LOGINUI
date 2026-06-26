@@ -93,6 +93,10 @@ flutter:
       fonts:
         - asset: assets\fonts\Lobster\Lobster-Regular.ttf
           weight: 600
+    - family: Whisper
+      fonts:
+        - asset: assets\fonts\Whisper-Regular.ttf
+          weight: 600
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
