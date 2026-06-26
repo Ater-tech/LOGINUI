@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_templates/log_in_pages/curved_ui/curved_down_ui.dart';
 import 'package:ui_templates/log_in_pages/simple_method/simple_blue.dart';
 
 class HomePage extends StatefulWidget {
@@ -73,7 +74,9 @@ class _HomeState extends State<HomePage> {
                 color: Colors.amberAccent,
                 child: ListTile(
                   title: Text("Oddiy 2 (pastga qayrilgan)", style: TextStyle(fontFamily: 'Black_Ops', fontWeight: FontWeight.w100)),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> CurvedDownUi()));
+                  },
                 ),
               ),
             ],
