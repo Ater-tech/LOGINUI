@@ -5,74 +5,80 @@ import 'email_field.dart';
 Flexible down(double height, double width) {
   return Flexible(
     flex: 7,
-    child: SingleChildScrollView(
-      child: Container(
-        padding: EdgeInsets.symmetric(horizontal: width * 0.025),
-        height: height * 0.7,
-        decoration: BoxDecoration(
-          color: const Color(0xFFFFF8E7),
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(height * 0.07),
-            topRight: Radius.circular(height * 0.07),
-          ),
+    child: Container(
+      padding: EdgeInsets.symmetric(horizontal: width * 0.025),
+      height: height * 0.7,
+      decoration: BoxDecoration(
+        color: const Color(0xFFFFF8E7),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(height * 0.07),
+          topRight: Radius.circular(height * 0.07),
         ),
-        child: Column(
-          children: [
-            SizedBox(height: height * 0.08),
-            emailField(width),
-            SizedBox(height: height * 0.02),
-            passwordField(width),
-            SizedBox(height: height * 0.02),
-            TextButton(
-              onPressed: () {},
-              child: Text(
-                "Forgot Password?",
-                style: TextStyle(
-                  color: Colors.grey,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+      ),
+      child: Column(
+        children: [
+          SizedBox(height: height * 0.08),
+          emailField(width),
+          SizedBox(height: height * 0.02),
+          passwordField(width),
+          SizedBox(height: height * 0.02),
+          TextButton(
+            onPressed: () {},
+            child: Text(
+              "Forgot Password?",
+              style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: height * 0.02),
-            loginButton(width, height),
-            SizedBox(height: height * 0.04),
-            Text(
-              "Continue with social media",
-              style: TextStyle(color: Colors.grey, fontFamily: 'Momo'),
-            ),
-            SizedBox(height: height * 0.04),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Expanded(
-                  child: Container(
-                    height: height * 0.05,
-                    decoration: BoxDecoration(
-                      color: Colors.blueAccent,
-                      borderRadius: BorderRadius.circular(50),
-                    ),
-                    child: InkWell(
-                      onTap: () {},
-                      child: Center(
-                        child: Text(
-                          "Facebook",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'Momo',
-                          ),
+          ),
+          SizedBox(height: height * 0.02),
+          loginButton(width, height),
+          SizedBox(height: height * 0.04),
+          Text(
+            "Continue with social media",
+            style: TextStyle(color: Colors.grey, fontFamily: 'Momo'),
+          ),
+          SizedBox(height: height * 0.04),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Expanded(
+                child: Container(
+                  height: height * 0.05,
+                  decoration: BoxDecoration(
+                    color: Colors.blueAccent,
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  child: InkWell(
+                    onTap: () {},
+                    child: Center(
+                      child: Text(
+                        "Facebook",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'Momo',
                         ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(width: width * 0.15),
-                Expanded(
-                  child: Container(
-                    height: height * 0.05,
-                    decoration: BoxDecoration(
-                      color: Colors.greenAccent,
-                      borderRadius: BorderRadius.circular(50),
+              ),
+              SizedBox(width: width * 0.15),
+              Expanded(
+                child: Container(
+                  height: height * 0.05,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        Colors.greenAccent.shade100,
+                        Colors.greenAccent.shade200,
+                        Colors.greenAccent.shade400,
+                        Colors.greenAccent.shade700,
+                      ],
+                      stops: [0.1, 0.4, 0.7, 0.9],
                     ),
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  child: InkWell(
+                    onTap: () {},
                     child: Center(
                       child: Text(
                         "Google",
@@ -84,11 +90,11 @@ Flexible down(double height, double width) {
                     ),
                   ),
                 ),
-              ],
-            ),
-          ],
-        ), // Cream,
-      ),
+              ),
+            ],
+          ),
+        ],
+      ), // Cream,
     ),
   );
 }

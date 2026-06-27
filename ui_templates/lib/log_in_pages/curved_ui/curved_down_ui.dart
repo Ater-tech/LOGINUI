@@ -31,9 +31,15 @@ class _MyUIState extends State<CurvedDownUi> {
             end: Alignment.bottomCenter,
           ),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [up(height, width), down(height, width)],
+        child: SingleChildScrollView(
+          child: SizedBox(
+            height: height,
+            width: width,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [up(height, width), down(height, width)],
+            ),
+          ),
         ),
       ),
     );
