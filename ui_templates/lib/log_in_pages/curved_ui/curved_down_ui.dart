@@ -29,28 +29,42 @@ class _MyUIState extends State<CurvedDownUi>{
           )
         ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-            Padding(padding: EdgeInsetsGeometry.only(
-              top: height*0.15, 
-              left: width*0.02, 
-              bottom: height*0.07),
-              child: Column(
-                children: [
-                  Text(
-                    "Login", 
-                    style: TextStyle(
-                      color: Colors.white, 
-                      fontWeight: FontWeight.bold, 
-                      fontSize: 32),
-                      ), 
-                  Text("Welcome Back"),
-                  ],
+            Flexible(
+              flex: 3,
+              child: Padding(
+                padding: EdgeInsetsGeometry.only(
+                top: height*0.12,
+                left: width*0.07,      
+                bottom: height*0.05),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,                  
+                  children: [
+                    Text(
+                      "Login", 
+                      style: TextStyle(
+                        color: Colors.white, 
+                        fontWeight: FontWeight.bold, 
+                        fontSize: 32),
+                        ), 
+                    Text("Welcome Back", style: TextStyle(color: Colors.white, fontSize: 20),),
+                    ],
+                ),
+                ),
+            ),
+          Flexible(
+            flex: 7,
+            child: SingleChildScrollView(
+              child: Container(
+                height: height*0.7,
+                decoration: BoxDecoration(
+                  color: const Color(0xFFFFF8E7),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(height*0.07), 
+                    topRight: Radius.circular(height*0.07)),
+                ), // Cream,
               ),
-              ),
-          SingleChildScrollView(
-            child: Container(
-              height: height*0.6,
-              color: const Color(0xFFFFF8E7) // Cream,
             ),
           ),
         ],
