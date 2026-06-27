@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ui_templates/log_in_pages/curved_ui/curved_down_ui.dart';
-import 'package:ui_templates/log_in_pages/simple_method/simple_blue.dart';
+import 'package:ui_templates/log_in_pages/log_in_page_list.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -40,46 +39,7 @@ class _HomeState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                "Log in \n PAGES",
-                style: TextStyle(
-                  fontFamily: 'Playwrite',
-                  fontWeight: FontWeight.w400,
-                  color: Colors.black,
-                  fontSize: 35,
-                ),
-              ),
-              Card(
-                color: Colors.lightBlueAccent,
-                margin: EdgeInsets.only(top: height * 0.03),
-                child: ListTile(
-                  title: Text(
-                    "Oddiy 1 (simple blue-white)", 
-                    style: TextStyle(
-                      fontFamily: 'Black_Ops', 
-                      fontWeight: FontWeight.w100),
-                          ),
-                  onTap: (){
-                    Navigator.push(
-                      context, 
-                      MaterialPageRoute(
-                        builder: (context) => SimpleBlue())
-                        );
-                  },
-                      ),                
-              ),
-              Card(
-                margin: EdgeInsets.only(top: height * 0.03),
-                color: Colors.amberAccent,
-                child: ListTile(
-                  title: Text("Oddiy 2 (pastga qayrilgan)", style: TextStyle(fontFamily: 'Black_Ops', fontWeight: FontWeight.w100)),
-                  onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> CurvedDownUi()));
-                  },
-                ),
-              ),
-            ],
+            children: [logInPages(height, context)],
           ),
         ),
       ),
